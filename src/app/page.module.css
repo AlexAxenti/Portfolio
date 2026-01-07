@@ -172,6 +172,27 @@
   font-size: 16px;
 }
 
+/* Projects Section */
+.projectsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sectionHeading {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.8px;
+  margin: 0;
+}
+
+.projectsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 /* Hover States */
 @media (hover: hover) and (pointer: fine) {
   .socialLinks a:hover {

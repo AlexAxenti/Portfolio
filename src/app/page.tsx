@@ -1,9 +1,77 @@
 import Image from "next/image";
 import type { Metadata } from "next";
-import { SiTypescript, SiSharp, SiRust, SiReact, SiNextdotjs, SiDotnet, SiNestjs } from "react-icons/si";
+import { SiTypescript, SiSharp, SiRust, SiReact, SiNextdotjs, SiDotnet, SiNestjs, SiPostgresql, SiTailwindcss, SiPython, SiGooglechrome } from "react-icons/si";
+import { HiExternalLink } from "react-icons/hi";
 import Card from "@/app/_components/Card";
 import TechBadge from "@/app/_components/TechBadge";
+import ProjectCard, { type Project } from "@/app/_components/ProjectCard";
 import styles from "./page.module.css";
+
+// Mock project data
+const projects: Project[] = [
+  {
+    id: "TouchBase",
+    title: "TouchBase",
+    category: "Web and Chrome Extension SaaS",
+    subtitle: "A full-stack e-commerce solution with real-time inventory management, payment processing, and analytics dashboard.",
+    image: "/TouchBase1.png",
+    techStack: [
+      { icon: <SiNextdotjs />, label: "Next.js", iconClassName: "" },
+      { icon: <SiTypescript />, label: "TypeScript", iconStyle: { color: "#3178C6" } },
+      { icon: <SiPostgresql />, label: "PostgreSQL", iconStyle: { color: "#4169E1" } },
+    ],
+    githubUrl: "https://github.com/alexaxenti/project",
+    externalLinks: [
+      { url: "https://example.com/demo", label: "Live Demo", icon: <HiExternalLink /> },
+    ],
+  },
+  {
+    id: "PostureCheck",
+    title: "Posture Check",
+    category: "Mobile App",
+    subtitle: "Collaborative task management tool with real-time updates, team workspaces, and productivity analytics.",
+    image: "/PostureCheck1.png",
+    techStack: [
+      { icon: <SiReact />, label: "React", iconStyle: { color: "#61DAFB" } },
+      { icon: <SiDotnet />, label: ".NET", iconStyle: { color: "#512BD4" } },
+      { icon: <SiTailwindcss />, label: "Tailwind", iconStyle: { color: "#06B6D4" } },
+    ],
+    githubUrl: "https://github.com/alexaxenti/project",
+    externalLinks: [
+      { url: "https://chrome.google.com/webstore", label: "Chrome Store", icon: <SiGooglechrome /> },
+      { url: "https://example.com/app", label: "Web App", icon: <HiExternalLink /> },
+    ],
+  },
+  {
+    id: "ShellStash",
+    title: "ShellStash",
+    category: "CLI Tool",
+    subtitle: "Interactive dashboard for visualizing complex datasets with customizable charts and real-time data streaming.",
+    image: "/ShellStash1.png",
+    techStack: [
+      { icon: <SiPython />, label: "Python", iconStyle: { color: "#3776AB" } },
+      { icon: <SiReact />, label: "React", iconStyle: { color: "#61DAFB" } },
+      { icon: <SiTypescript />, label: "TypeScript", iconStyle: { color: "#3178C6" } },
+    ],
+    externalLinks: [
+      { url: "https://example.com/dashboard", label: "View Dashboard", icon: <HiExternalLink /> },
+    ],
+  },{
+    id: "MiniCRM",
+    title: "MiniCRM",
+    category: "Systems Design Practice",
+    subtitle: "Interactive dashboard for visualizing complex datasets with customizable charts and real-time data streaming.",
+    image: "/MiniCRM1.png",
+    techStack: [
+      { icon: <SiPython />, label: "Python", iconStyle: { color: "#3776AB" } },
+      { icon: <SiReact />, label: "React", iconStyle: { color: "#61DAFB" } },
+      { icon: <SiTypescript />, label: "TypeScript", iconStyle: { color: "#3178C6" } },
+    ],
+    externalLinks: [
+      { url: "https://example.com/dashboard", label: "View Dashboard", icon: <HiExternalLink /> },
+    ],
+  },
+];
 
 export const metadata: Metadata = {
   title: "Alex Axenti - Full-Stack Developer",
@@ -107,9 +175,14 @@ export default function Home() {
         </section>
 
         {/* Bottom Section - Placeholder for future content */}
-        <Card className={styles.bottomSection}>
-          <p className={styles.placeholderText}>More content coming soon...</p>
-        </Card>
+        <section className={styles.projectsSection}>
+          <h2 className={styles.sectionHeading}>Featured Projects</h2>
+          <div className={styles.projectsGrid}>
+            {projects.map((project) => (
+              <ProjectCard key={project.id} project={project} />
+            ))}
+          </div>
+        </section>
       </main>
 
       {/* JSON-LD Structured Data for SEO */}
