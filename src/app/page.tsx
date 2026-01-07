@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { Metadata } from "next";
-import { SiTypescript, SiSharp, SiRust, SiReact, SiNextdotjs, SiDotnet, SiNestjs, SiPostgresql, SiDocker, SiGooglechrome, SiApple, SiRedis } from "react-icons/si";
+import { SiTypescript, SiSharp, SiRust, SiReact, SiNextdotjs, SiDotnet, SiNestjs, SiPostgresql, SiDocker, SiGooglechrome, SiApple, SiRedis, SiSupabase, SiStripe, SiExpo } from "react-icons/si";
 import { HiExternalLink } from "react-icons/hi";
 import Card from "@/app/_components/Card";
 import TechBadge from "@/app/_components/TechBadge";
@@ -20,6 +20,8 @@ const projects: Project[] = [
       { icon: <SiTypescript />, label: "TypeScript", iconStyle: { color: "#3178C6" } },
       { icon: <SiPostgresql />, label: "PostgreSQL", iconStyle: { color: "#4169E1" } },
       { icon: <SiDocker />, label: "Docker", iconStyle: { color: "#2496ED" } },
+      { icon: <SiSupabase />, label: "Supabase", iconStyle: { color: "#3FCF8E" } },
+      { icon: <SiStripe />, label: "Stripe", iconStyle: { color: "#635BFF" } },
     ],
     externalLinks: [
       { url: "https://touch-base.ca/", label: "Web App", icon: <HiExternalLink /> },
@@ -36,6 +38,7 @@ const projects: Project[] = [
     techStack: [
       { icon: <SiReact />, label: "React Native", iconStyle: { color: "#61DAFB" } },
       { icon: <SiTypescript />, label: "TypeScript", iconStyle: { color: "#3178C6" } },
+      { icon: <SiExpo />, label: "Expo", iconClassName: styles.nextjsIcon },
     ],
     externalLinks: [
       { url: "https://apps.apple.com/ca/app/posture-check/id6751126852", label: "App Store", icon: <SiApple /> },
@@ -109,7 +112,7 @@ export default function Home() {
                   <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                 </svg>
               </a>
-              <a href="mailto:alex.axenti@example.com" aria-label="Email">
+              <a href="mailto:alex.axenti@gmail.com" aria-label="Email">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
                 </svg>
@@ -187,8 +190,15 @@ export default function Home() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Person",
+            "@id": "https://alexaxenti.com/#person",
             name: "Alex Axenti",
             jobTitle: "Full-Stack Developer",
+            worksFor: {
+              "@type": "Organization",
+              name: "Evenica",
+              url: "https://evenica.com"
+            },
+            image: "https://alexaxenti.com/Profile.jpg",
             url: "https://alexaxenti.com",
             sameAs: [
               "https://github.com/alexaxenti",
@@ -201,12 +211,24 @@ export default function Home() {
             },
             knowsAbout: [
               "Full-stack web development",
-              "Web application architecture",
               "TypeScript",
               "React",
+              "Next.js",
+              "NestJS",
+              ".NET",
+              "Rust",
+              "PostgreSQL",
+              "Redis",
+              "Docker",
+              "System design",
               "Backend systems",
-              "Docker"
-            ]
+            ],
+            contactPoint: {
+              "@type": "ContactPoint",
+              contactType: "professional inquiries",
+              email: "alex.axenti@gmail.com",
+              availableLanguage: ["English"]
+            }
           }),
         }}
       />
