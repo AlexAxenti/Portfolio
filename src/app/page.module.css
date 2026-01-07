@@ -32,15 +32,11 @@
 
 /* Profile Card - Left Square */
 .profileCard {
-  background: var(--card-background);
-  border-radius: 20px;
   padding: 32px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  border: 1px solid var(--border-color);
 }
 
 .profileName {
@@ -115,11 +111,7 @@
 
 /* Intro Card - Right Rectangle */
 .introCard {
-  background: var(--card-background);
-  border-radius: 20px;
   padding: 40px 40px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  border: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -162,37 +154,13 @@
   gap: 12px;
 }
 
-.techBadge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  background: var(--background);
-  border: 1px solid var(--border-color);
-  border-radius: 20px;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--text-primary);
-  transition: all 0.2s ease;
-}
-
-.techIcon {
-  width: 16px;
-  height: 16px;
-  flex-shrink: 0;
-}
-
 .nextjsIcon {
   color: #000000;
 }
 
 /* Bottom Section */
 .bottomSection {
-  background: var(--card-background);
-  border-radius: 20px;
   padding: 48px 40px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  border: 1px solid var(--border-color);
   min-height: 200px;
   display: flex;
   align-items: center;
@@ -211,11 +179,6 @@
     color: white;
     border-color: var(--accent-color);
     transform: translateY(-2px);
-  }
-
-  .techBadge:hover {
-    border-color: var(--accent-color);
-    color: var(--accent-color);
   }
 }
 

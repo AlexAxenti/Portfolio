@@ -1,0 +1,30 @@
+.techBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--background);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+}
+
+.techIcon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover States */
+@media (hover: hover) and (pointer: fine) {
+  .techBadge:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+  }
+}

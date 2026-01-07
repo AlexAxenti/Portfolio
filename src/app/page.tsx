@@ -1,6 +1,8 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import { SiTypescript, SiSharp, SiRust, SiReact, SiNextdotjs, SiDotnet, SiNestjs } from "react-icons/si";
+import Card from "@/app/_components/Card";
+import TechBadge from "@/app/_components/TechBadge";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -15,7 +17,7 @@ export default function Home() {
         {/* Top Section */}
         <section className={styles.topSection}>
           {/* Profile Card - Left */}
-          <div className={styles.profileCard}>
+          <Card className={styles.profileCard}>
             <h1 className={styles.profileName}>Alex Axenti</h1>
             <div className={styles.profileImageWrapper}>
               <Image
@@ -50,10 +52,10 @@ export default function Home() {
                 </svg>
               </a>
             </div>
-          </div>
+          </Card>
 
           {/* Intro Card - Right */}
-          <div className={styles.introCard}>
+          <Card className={styles.introCard}>
             {/* <h2 className={styles.introHeading}>Driven by curiosity and continuous learning.</h2> */}
             <h2 className={styles.introHeading}>Driven by curiosity, continuous learning, and meaningful impact.</h2>
             <p className={styles.introText}>
@@ -64,43 +66,50 @@ export default function Home() {
             <div className={styles.techStack}>
               <h3 className={styles.techStackHeading}>Tech Stack</h3>
               <div className={styles.techStackGrid}>
-                <span className={styles.techBadge}>
-                  <SiTypescript className={styles.techIcon} style={{ color: '#3178C6' }} />
-                  TypeScript
-                </span>
-                <span className={styles.techBadge}>
-                  <SiSharp className={styles.techIcon} style={{ color: '#239120' }} />
-                  C#
-                </span>
-                <span className={styles.techBadge}>
-                  <SiRust className={styles.techIcon} style={{ color: '#CE422B' }} />
-                  Rust
-                </span>
-                <span className={styles.techBadge}>
-                  <SiReact className={styles.techIcon} style={{ color: '#61DAFB' }} />
-                  React
-                </span>
-                <span className={styles.techBadge}>
-                  <SiNextdotjs className={`${styles.techIcon} ${styles.nextjsIcon}`} />
-                  Next.js
-                </span>
-                <span className={styles.techBadge}>
-                  <SiDotnet className={styles.techIcon} style={{ color: '#512BD4' }} />
-                  .NET
-                </span>
-                <span className={styles.techBadge}>
-                  <SiNestjs className={styles.techIcon} style={{ color: '#F1455F' }} />
-                  NestJS
-                </span>
+                <TechBadge 
+                  icon={<SiTypescript />}
+                  label="TypeScript"
+                  iconStyle={{ color: '#3178C6' }}
+                />
+                <TechBadge 
+                  icon={<SiSharp />}
+                  label="C#"
+                  iconStyle={{ color: '#239120' }}
+                />
+                <TechBadge 
+                  icon={<SiRust />}
+                  label="Rust"
+                  iconStyle={{ color: '#CE422B' }}
+                />
+                <TechBadge 
+                  icon={<SiReact />}
+                  label="React"
+                  iconStyle={{ color: '#61DAFB' }}
+                />
+                <TechBadge 
+                  icon={<SiNextdotjs />}
+                  label="Next.js"
+                  iconClassName={styles.nextjsIcon}
+                />
+                <TechBadge 
+                  icon={<SiDotnet />}
+                  label=".NET"
+                  iconStyle={{ color: '#512BD4' }}
+                />
+                <TechBadge 
+                  icon={<SiNestjs />}
+                  label="NestJS"
+                  iconStyle={{ color: '#F1455F' }}
+                />
               </div>
             </div>
-          </div>
+          </Card>
         </section>
 
         {/* Bottom Section - Placeholder for future content */}
-        <section className={styles.bottomSection}>
+        <Card className={styles.bottomSection}>
           <p className={styles.placeholderText}>More content coming soon...</p>
-        </section>
+        </Card>
       </main>
 
       {/* JSON-LD Structured Data for SEO */}
