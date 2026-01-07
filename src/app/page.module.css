@@ -117,12 +117,13 @@
 .introCard {
   background: var(--card-background);
   border-radius: 20px;
-  padding: 48px 40px;
+  padding: 40px 40px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   border: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
   gap: 32px;
+  height: 442px;
 }
 
 .introHeading {
@@ -250,6 +251,7 @@
     width: 90px;
     height: 90px;
     margin-bottom: 0;
+    margin-right: 25px;
     flex-shrink: 0;
   }
 

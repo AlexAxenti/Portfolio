@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { Metadata } from "next";
-import { SiTypescript, SiSharp, SiRust, SiReact, SiNextdotjs, SiDotnet, SiDocker } from "react-icons/si";
+import { SiTypescript, SiSharp, SiRust, SiReact, SiNextdotjs, SiDotnet, SiNestjs } from "react-icons/si";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -89,8 +89,8 @@ export default function Home() {
                   .NET
                 </span>
                 <span className={styles.techBadge}>
-                  <SiDocker className={styles.techIcon} style={{ color: '#2496ED' }} />
-                  Docker
+                  <SiNestjs className={styles.techIcon} style={{ color: '#F1455F' }} />
+                  NestJS
                 </span>
               </div>
             </div>
