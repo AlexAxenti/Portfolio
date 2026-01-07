@@ -1,75 +1,70 @@
 import Image from "next/image";
 import type { Metadata } from "next";
-import { SiTypescript, SiSharp, SiRust, SiReact, SiNextdotjs, SiDotnet, SiNestjs, SiPostgresql, SiTailwindcss, SiPython, SiGooglechrome } from "react-icons/si";
+import { SiTypescript, SiSharp, SiRust, SiReact, SiNextdotjs, SiDotnet, SiNestjs, SiPostgresql, SiDocker, SiGooglechrome, SiApple, SiRedis } from "react-icons/si";
 import { HiExternalLink } from "react-icons/hi";
 import Card from "@/app/_components/Card";
 import TechBadge from "@/app/_components/TechBadge";
 import ProjectCard, { type Project } from "@/app/_components/ProjectCard";
 import styles from "./page.module.css";
 
-// Mock project data
 const projects: Project[] = [
   {
     id: "TouchBase",
     title: "TouchBase",
     category: "Web and Chrome Extension SaaS",
-    subtitle: "A full-stack e-commerce solution with real-time inventory management, payment processing, and analytics dashboard.",
+    subtitle: "A lightweight, AI-powered networking CRM to organize contacts, track follow-ups, and stay intentional with professional relationships.",
     image: "/TouchBase1.png",
     techStack: [
-      { icon: <SiNextdotjs />, label: "Next.js", iconClassName: "" },
+      { icon: <SiReact />, label: "React", iconStyle: { color: "#61DAFB" } },
+      { icon: <SiNestjs />, label: "NestJS", iconStyle: { color: "#E0234E" } },
       { icon: <SiTypescript />, label: "TypeScript", iconStyle: { color: "#3178C6" } },
       { icon: <SiPostgresql />, label: "PostgreSQL", iconStyle: { color: "#4169E1" } },
+      { icon: <SiDocker />, label: "Docker", iconStyle: { color: "#2496ED" } },
     ],
-    githubUrl: "https://github.com/alexaxenti/project",
     externalLinks: [
-      { url: "https://example.com/demo", label: "Live Demo", icon: <HiExternalLink /> },
+      { url: "https://touch-base.ca/", label: "Web App", icon: <HiExternalLink /> },
+      { url: "https://chromewebstore.google.com/detail/touchbase/dgmjggdiacoemgnjjlkijjcmdljnmhok", label: "Chrome Store", icon: <SiGooglechrome /> },
     ],
   },
   {
     id: "PostureCheck",
     title: "Posture Check",
     category: "Mobile App",
-    subtitle: "Collaborative task management tool with real-time updates, team workspaces, and productivity analytics.",
+    subtitle: "A cross-platform mobile app that helps users improve posture through gentle reminders and habit tracking.",
     image: "/PostureCheck1.png",
+    imageStyle: { objectFit: "cover", height: "260px" },
     techStack: [
-      { icon: <SiReact />, label: "React", iconStyle: { color: "#61DAFB" } },
-      { icon: <SiDotnet />, label: ".NET", iconStyle: { color: "#512BD4" } },
-      { icon: <SiTailwindcss />, label: "Tailwind", iconStyle: { color: "#06B6D4" } },
+      { icon: <SiReact />, label: "React Native", iconStyle: { color: "#61DAFB" } },
+      { icon: <SiTypescript />, label: "TypeScript", iconStyle: { color: "#3178C6" } },
     ],
-    githubUrl: "https://github.com/alexaxenti/project",
     externalLinks: [
-      { url: "https://chrome.google.com/webstore", label: "Chrome Store", icon: <SiGooglechrome /> },
-      { url: "https://example.com/app", label: "Web App", icon: <HiExternalLink /> },
+      { url: "https://apps.apple.com/ca/app/posture-check/id6751126852", label: "App Store", icon: <SiApple /> },
     ],
   },
   {
     id: "ShellStash",
     title: "ShellStash",
     category: "CLI Tool",
-    subtitle: "Interactive dashboard for visualizing complex datasets with customizable charts and real-time data streaming.",
+    subtitle: "A cross-platform Rust CLI for saving, organizing, and reusing shell commands.",
     image: "/ShellStash1.png",
     techStack: [
-      { icon: <SiPython />, label: "Python", iconStyle: { color: "#3776AB" } },
-      { icon: <SiReact />, label: "React", iconStyle: { color: "#61DAFB" } },
-      { icon: <SiTypescript />, label: "TypeScript", iconStyle: { color: "#3178C6" } },
+      { icon: <SiRust />, label: "Rust", iconStyle: { color: "#CE422B" } },
     ],
-    externalLinks: [
-      { url: "https://example.com/dashboard", label: "View Dashboard", icon: <HiExternalLink /> },
-    ],
+    githubUrl: "https://github.com/AlexAxenti/ShellStash"
   },{
     id: "MiniCRM",
     title: "MiniCRM",
     category: "Systems Design Practice",
-    subtitle: "Interactive dashboard for visualizing complex datasets with customizable charts and real-time data streaming.",
+    subtitle: "A modular CRM built to explore and practice system design patterns, service boundaries, and scalability trade-offs.",
     image: "/MiniCRM1.png",
     techStack: [
-      { icon: <SiPython />, label: "Python", iconStyle: { color: "#3776AB" } },
       { icon: <SiReact />, label: "React", iconStyle: { color: "#61DAFB" } },
-      { icon: <SiTypescript />, label: "TypeScript", iconStyle: { color: "#3178C6" } },
+      { icon: <SiNestjs />, label: "NestJS", iconStyle: { color: "#E0234E" } },
+      { icon: <SiNextdotjs />, label: "Next.js", iconClassName: styles.nextjsIcon },
+      { icon: <SiRedis />, label: "Redis", iconStyle: { color: "#DC382D" } },
+      { icon: <SiDocker />, label: "Docker", iconStyle: { color: "#2496ED" } },
     ],
-    externalLinks: [
-      { url: "https://example.com/dashboard", label: "View Dashboard", icon: <HiExternalLink /> },
-    ],
+    githubUrl: "https://github.com/AlexAxenti/mini-crm"
   },
 ];
 
@@ -174,7 +169,7 @@ export default function Home() {
           </Card>
         </section>
 
-        {/* Bottom Section - Placeholder for future content */}
+        {/* Bottom Section */}
         <section className={styles.projectsSection}>
           <h2 className={styles.sectionHeading}>Featured Projects</h2>
           <div className={styles.projectsGrid}>

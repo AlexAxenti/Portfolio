@@ -13,6 +13,8 @@ export interface Project {
   category: string;
   subtitle: string;
   image: string;
+  imageClassName?: string;
+  imageStyle?: React.CSSProperties;
   techStack: Array<{
     icon: React.ReactNode;
     label: string;
@@ -38,18 +40,25 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <Image
           src={project.image}
           alt={`${project.title} preview`}
-          fill
-          className={styles.image}
-          sizes="(max-width: 768px) 100vw, 400px"
+          width={320}
+          height={280}
+          className={`${styles.image} ${project.imageClassName || ''}`}
+          style={project.imageStyle}
+          priority
         />
       </div>
       
       <div className={styles.content}>
-        <div className={styles.header}>
-          <Link href={`/projects/${project.id}`} className={styles.titleLink}>
-            <h3 className={styles.title}>{project.title}</h3>
+        <div className={styles.topBar}>
+          <div className={styles.header}>
+            <Link href={`/projects/${project.id}`} className={styles.titleLink}>
+              <h3 className={styles.title}>{project.title}</h3>
+            </Link>
+            <span className={styles.category}>({project.category})</span>
+          </div>
+          <Link href={`/projects/${project.id}`} className={styles.viewDetailsLink}>
+            View Details →
           </Link>
-          <span className={styles.category}>({project.category})</span>
         </div>
         
         <p className={styles.subtitle}>{project.subtitle}</p>
