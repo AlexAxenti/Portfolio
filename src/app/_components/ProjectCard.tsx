@@ -1,33 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SiGithub } from "react-icons/si";
-import { HiExternalLink } from "react-icons/hi";
 import Card from "./Card";
 import TechBadge from "./TechBadge";
 import LinkButton from "./LinkButton";
 import styles from "./ProjectCard.module.css";
-
-export interface Project {
-  id: string;
-  title: string;
-  category: string;
-  subtitle: string;
-  image: string;
-  imageClassName?: string;
-  imageStyle?: React.CSSProperties;
-  techStack: Array<{
-    icon: React.ReactNode;
-    label: string;
-    iconStyle?: React.CSSProperties;
-    iconClassName?: string;
-  }>;
-  githubUrl?: string;
-  externalLinks?: Array<{
-    url: string;
-    label: string;
-    icon: React.ReactNode;
-  }>;
-}
+import { Project } from "@/data/projects";
 
 interface ProjectCardProps {
   project: Project;

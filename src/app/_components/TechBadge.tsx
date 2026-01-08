@@ -11,7 +11,7 @@ interface TechBadgeProps {
 export default function TechBadge({ icon, label, iconClassName, iconStyle }: TechBadgeProps) {
   return (
     <span className={styles.techBadge}>
-      <span className={`${styles.techIcon} ${iconClassName || ''}`} style={iconStyle}>
+      <span className={`${styles.techIcon} ${iconClassName ? styles[iconClassName] : ''}`} style={iconStyle}>
         {icon}
       </span>
       {label}

@@ -21,6 +21,10 @@
   justify-content: center;
 }
 
+.nextjsIcon {
+  color: #000000;
+}
+
 /* Hover States */
 @media (hover: hover) and (pointer: fine) {
   .techBadge:hover {
@@ -28,3 +32,10 @@
     color: var(--accent-color);
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  .nextjsIcon {
+    color: #ffffff;
+  }
+}
+
