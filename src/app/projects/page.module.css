@@ -86,17 +86,3 @@
     gap: 8px;
   }
 }
-
-
-@media (prefers-color-scheme: dark) {
-  .page {
-    --background: #000000;
-    --card-background: #1c1c1e;
-    --text-primary: #f5f5f7;
-    --text-secondary: #a1a1a6;
-    --text-muted: #636366;
-    --border-color: #2c2c2e;
-    --accent-color: #0a84ff;
-    --accent-hover: #409cff;
-  }
-}
