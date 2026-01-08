@@ -203,7 +203,7 @@
 }
 
 @media (min-width: 900px) {
-  .introCard {
+  .introCard, .profileCard {
     height: 442px;
   }
 }
