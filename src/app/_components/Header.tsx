@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { IoMenu, IoClose } from "react-icons/io5";
 import styles from "./Header.module.css";
+import Image from "next/image";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,7 +23,26 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.headerContainer}>
         <Link href="/" className={styles.logo}>
-          Alex Axenti
+          <Image
+            src="/AALight.png"
+            alt="Portfolio Logo"
+            width={60}
+            height={60}
+            className={styles.logoImageLight}
+            style={{ objectFit: "contain" }}
+            priority
+            unoptimized
+          />
+          <Image
+            src="/AADark.png"
+            alt="Portfolio Logo"
+            width={60}
+            height={60}
+            className={styles.logoImageDark}
+            style={{ objectFit: "contain" }}
+            priority
+            unoptimized
+          />
         </Link>
 
         {/* Desktop Navigation */}

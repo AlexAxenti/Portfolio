@@ -88,7 +88,9 @@ export const projects: Project[] = [
       { icon: <SiNestjs />, label: "NestJS", iconStyle: { color: "#E0234E" } },
       { icon: <SiNextdotjs />, label: "Next.js", iconClassName: "nextjsIcon" },
       { icon: <SiRedis />, label: "Redis", iconStyle: { color: "#DC382D" } },
+      { icon: <SiPostgresql />, label: "PostgreSQL", iconStyle: { color: "#4169E1" } },
       { icon: <SiDocker />, label: "Docker", iconStyle: { color: "#2496ED" } },
+      { icon: <SiSupabase />, label: "Supabase", iconStyle: { color: "#3FCF8E" } },
     ],
     githubUrl: "https://github.com/AlexAxenti/mini-crm"
   },
