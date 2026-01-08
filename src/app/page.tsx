@@ -119,55 +119,55 @@ export default function Home() {
         </section>
       </main>
 
-      {/* JSON-LD Structured Data for SEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "@id": "https://alexaxenti.com/#person",
-            name: "Alex Axenti",
-            jobTitle: "Full-Stack Developer",
-            worksFor: {
-              "@type": "Organization",
-              name: "Evenica",
-              url: "https://evenica.com"
-            },
-            image: "https://alexaxenti.com/Profile.jpg",
-            url: "https://alexaxenti.com",
-            sameAs: [
-              "https://github.com/alexaxenti",
-              "https://www.linkedin.com/in/alexaxenti/",
-            ],
-            address: {
-              "@type": "PostalAddress",
-              addressLocality: "Burlington",
-              addressCountry: "Canada",
-            },
-            knowsAbout: [
-              "Full-stack web development",
-              "TypeScript",
-              "React",
-              "Next.js",
-              "NestJS",
-              ".NET",
-              "Rust",
-              "PostgreSQL",
-              "Redis",
-              "Docker",
-              "System design",
-              "Backend systems",
-            ],
-            contactPoint: {
-              "@type": "ContactPoint",
-              contactType: "professional inquiries",
-              email: "alex.axenti@gmail.com",
-              availableLanguage: ["English"]
-            }
-          }),
-        }}
-      />
+    {/* JSON-LD Structured Data for SEO */}
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "@id": "https://alexaxenti.com/#person",
+          name: "Alex Axenti",
+          jobTitle: "Full-Stack Developer",
+          worksFor: {
+            "@type": "Organization",
+            name: "Evenica",
+            url: "https://evenica.com"
+          },
+          image: "https://alexaxenti.com/Profile.jpg",
+          url: "https://alexaxenti.com",
+          sameAs: [
+            "https://github.com/alexaxenti",
+            "https://www.linkedin.com/in/alexaxenti/",
+          ],
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Burlington",
+            addressCountry: "Canada",
+          },
+          knowsAbout: [
+            "Full-stack web development",
+            "TypeScript",
+            "React",
+            "Next.js",
+            "NestJS",
+            ".NET",
+            "Rust",
+            "PostgreSQL",
+            "Redis",
+            "Docker",
+            "System design",
+            "Backend systems",
+          ],
+          contactPoint: {
+            "@type": "ContactPoint",
+            contactType: "professional inquiries",
+            email: "alex.axenti@gmail.com",
+            availableLanguage: ["English"]
+          }
+        }),
+      }}
+    />
     </div>
   );
 }

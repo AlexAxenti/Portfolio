@@ -1,11 +1,14 @@
 import { SiTypescript, SiRust, SiReact, SiNextdotjs, SiNestjs, SiPostgresql, SiDocker, SiGooglechrome, SiApple, SiRedis, SiSupabase, SiStripe, SiExpo } from "react-icons/si";
 import { HiExternalLink } from "react-icons/hi";
 
+export type ProjectStatus = "completed" | "in-progress"
+
 export interface Project {
   id: string;
   title: string;
   category: string;
   subtitle: string;
+  projectStatus: ProjectStatus;
   image: string;
   imageClassName?: string;
   imageStyle?: React.CSSProperties;
@@ -29,6 +32,7 @@ export const projects: Project[] = [
     title: "TouchBase",
     category: "Web and Chrome Extension SaaS",
     subtitle: "A lightweight, AI-powered networking CRM to organize contacts, track follow-ups, and stay intentional with professional relationships.",
+    projectStatus: "completed",
     image: "/TouchBase1.png",
     techStack: [
       { icon: <SiReact />, label: "React", iconStyle: { color: "#61DAFB" } },
@@ -49,6 +53,7 @@ export const projects: Project[] = [
     title: "Posture Check",
     category: "Mobile App",
     subtitle: "A cross-platform mobile app that helps users improve posture through gentle reminders and habit tracking.",
+    projectStatus: "completed",
     image: "/PostureCheck1.png",
     imageStyle: { objectFit: "cover", height: "260px" },
     techStack: [
@@ -65,6 +70,7 @@ export const projects: Project[] = [
     title: "ShellStash",
     category: "CLI Tool",
     subtitle: "A cross-platform Rust CLI for saving, organizing, and reusing shell commands.",
+    projectStatus: "completed",
     image: "/ShellStash1.png",
     techStack: [
       { icon: <SiRust />, label: "Rust", iconStyle: { color: "#CE422B" } },
@@ -75,6 +81,7 @@ export const projects: Project[] = [
     title: "MiniCRM",
     category: "Systems Design Practice",
     subtitle: "A modular CRM built to explore and practice system design patterns, service boundaries, and scalability trade-offs.",
+    projectStatus: "completed",
     image: "/MiniCRM1.png",
     techStack: [
       { icon: <SiReact />, label: "React", iconStyle: { color: "#61DAFB" } },
