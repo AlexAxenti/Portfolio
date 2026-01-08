@@ -115,7 +115,6 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-  height: 442px;
 }
 
 .introHeading {
@@ -200,6 +199,12 @@
     color: white;
     border-color: var(--accent-color);
     transform: translateY(-2px);
+  }
+}
+
+@media (min-width: 900px) {
+  .introCard {
+    height: 442px;
   }
 }
 
