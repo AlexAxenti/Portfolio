@@ -82,8 +82,14 @@ export const projects: Project[] = [
         type: "section", 
         title: "Overview", 
         blocks: [
-          { type: "paragraph", content: "TouchBase began as a solution to a common problem: staying meaningfully connected with professional contacts without letting relationships slip through the cracks. Built with modern web technologies, it combines a full-featured web application with a seamless Chrome extension to capture contacts on the fly." },
-          { type: "paragraph", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris." }
+          { 
+            type: "paragraph", 
+            content: "TouchBase was created by me and a group of friends. Our goal was to make networking feel less awkward and more consistent. Instead of treating connections like a spreadsheet, it’s built around lightweight notes, follow-up reminders, and quick context so you don’t forget why you connected with someone in the first place." 
+          },
+          { 
+            type: "paragraph", 
+            content: "It ships as a web app plus a Chrome extension, allowing you to seemlessly capture interactions anywhere on the web, immediately." 
+          }
         ]
       },
       {
@@ -93,11 +99,11 @@ export const projects: Project[] = [
           { 
             type: "bullets", 
             items: [
-              "Intelligent contact management with AI-powered insights",
-              "Chrome extension for quick contact capture from LinkedIn and other platforms",
-              "Automated follow-up reminders and relationship tracking",
-              "Subscription management with Stripe integration",
-              "Real-time sync across web and extension"
+              "Contacts with tags, notes, and follow-up reminders.",
+              "Chrome extension to capture and save people while you’re browsing anywhere on the web.",
+              "AI chat that uses your stored context to suggest conversation starters and next steps",
+              "Stripe subscriptions for paid features + usage limits",
+              "Web + extension stay in sync so you can log things wherever you are",
             ]
           }
         ]
@@ -106,12 +112,17 @@ export const projects: Project[] = [
         type: "section",
         title: "Technical Highlights",
         blocks: [
-          { type: "paragraph", content: "The application architecture leverages NestJS on the backend for scalable API development, with PostgreSQL handling persistent data storage and Supabase providing authentication and real-time capabilities. The frontend React application communicates seamlessly with the Chrome extension through message passing." },
-          { type: "paragraph", content: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula." }
+          { 
+            type: "paragraph", 
+            content: "The application architecture leverages NestJS on the backend for scalable API development, with PostgreSQL handling persistent data storage and Supabase providing authentication and real-time capabilities. The frontend applications are both built using React" 
+          },
+          { 
+            type: "paragraph", 
+            content: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula." }
         ]
       }
     ],
-    dateRange: "2024 - 2025",
+    dateRange: "2025 - 2026",
   },
   {
     id: "PostureCheck",
@@ -170,7 +181,7 @@ export const projects: Project[] = [
         ]
       }
     ],
-    dateRange: "2024",
+    dateRange: "2025",
   },
   {
     id: "ShellStash",
@@ -224,7 +235,7 @@ export const projects: Project[] = [
         ]
       }
     ],
-    dateRange: "2024",
+    dateRange: "2025",
   },{
     id: "MiniCRM",
     title: "MiniCRM",
@@ -283,6 +294,6 @@ export const projects: Project[] = [
         ]
       }
     ],
-    dateRange: "2024",
+    dateRange: "2025",
   },
 ];
