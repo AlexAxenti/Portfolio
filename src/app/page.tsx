@@ -9,7 +9,7 @@ import { projects } from "@/data/projects";
 
 export const metadata: Metadata = {
   title: "Alex Axenti - Full-Stack Developer",
-  description: "Full-stack developer building scalable web applications with a focus on clean architecture, performance, and user experience. Based in Burlington, Canada.",
+  description: "Full-stack developer building scalable multi-platform applications with a focus on clean architecture, performance, and user experience. Based in Burlington, Canada.",
 };
 
 export default function Home() {
@@ -61,7 +61,7 @@ export default function Home() {
             {/* <h2 className={styles.introHeading}>Driven by curiosity and continuous learning.</h2> */}
             <h2 className={styles.introHeading}>Driven by curiosity, continuous learning, and meaningful impact.</h2>
             <p className={styles.introText}>
-              I design and build scalable web applications with a focus on clean architecture, performance, and user experience, 
+              I design and build scalable multi-platform applications with a focus on clean architecture, performance, and user experience, 
               taking ideas from concept to production.
             </p>
             
