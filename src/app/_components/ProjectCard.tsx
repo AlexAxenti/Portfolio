@@ -12,16 +12,20 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
+  if (!project.media[0]) return null;
+
+  const image = project.media[0];
+ 
   return (
     <Card className={styles.projectCard}>
       <div className={styles.imageWrapper}>
         <Image
-          src={project.image}
-          alt={`${project.title} preview`}
+          src={image.src}
+          alt={image.alt}
           width={320}
           height={280}
-          className={`${styles.image} ${project.imageClassName || ''}`}
-          style={project.imageStyle}
+          className={`${styles.image} ${image.className || ''}`}
+          style={image.style}
           priority
         />
       </div>
