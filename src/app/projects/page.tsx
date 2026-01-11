@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ProjectsClient from "./projects-client";
 
 export const metadata: Metadata = {
-  title: "Projects | Alex Axenti",
+  title: "Projects",
   description:
     "A selection of projects by Alex Axenti, including web apps, mobile apps, SaaS tools, and system design experiments.",
   alternates: {
