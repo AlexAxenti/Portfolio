@@ -113,7 +113,7 @@ export default function Home() {
           <h2 className={styles.sectionHeading}>Featured Projects</h2>
           <div className={styles.projectsGrid}>
             {projects.map((project) => (
-              <ProjectCard key={project.id} project={project} />
+              project.displayHomepage && <ProjectCard key={project.id} project={project} />
             ))}
           </div>
         </section>

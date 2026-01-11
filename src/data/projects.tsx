@@ -27,6 +27,7 @@ export interface Project {
   }>;
   content?: ProjectContentBlock[];
   dateRange?: string;
+  displayHomepage?: boolean;
 }
 
 export interface ProjectMediaItem  {
@@ -123,6 +124,7 @@ export const projects: Project[] = [
       }
     ],
     dateRange: "2025 - 2026",
+    displayHomepage: true,
   },
   {
     id: "PostureCheck",
@@ -182,6 +184,7 @@ export const projects: Project[] = [
       }
     ],
     dateRange: "2025",
+    displayHomepage: true,
   },
   {
     id: "ShellStash",
@@ -236,6 +239,7 @@ export const projects: Project[] = [
       }
     ],
     dateRange: "2025",
+    displayHomepage: true,
   },{
     id: "MiniCRM",
     title: "MiniCRM",
@@ -295,6 +299,7 @@ export const projects: Project[] = [
       }
     ],
     dateRange: "2025",
+    displayHomepage: true,
   },
   {
     id: "LeagueAPIApp",
@@ -309,5 +314,6 @@ export const projects: Project[] = [
     ],
     githubUrl: "https://github.com/AlexAxenti/League-API-App",
     dateRange: "2022",
+    displayHomepage: false,
   }
 ];
