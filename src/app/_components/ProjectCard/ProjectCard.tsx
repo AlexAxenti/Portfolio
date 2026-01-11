@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SiGithub } from "react-icons/si";
-import Card from "./Card";
-import TechBadge from "./TechBadge";
-import LinkButton from "./LinkButton";
+import Card from "../Card/Card";
+import TechBadge from "../TechBadge/TechBadge";
+import LinkButton from "../LinkButton/LinkButton";
 import styles from "./ProjectCard.module.css";
 import { Project } from "@/data/projects";
 

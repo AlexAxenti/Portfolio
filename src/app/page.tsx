@@ -1,9 +1,9 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import { SiTypescript, SiSharp, SiRust, SiReact, SiNextdotjs, SiDotnet, SiNestjs } from "react-icons/si";
-import Card from "@/app/_components/Card";
-import TechBadge from "@/app/_components/TechBadge";
-import ProjectCard from "@/app/_components/ProjectCard";
+import Card from "@/app/_components/Card/Card";
+import TechBadge from "@/app/_components/TechBadge/TechBadge";
+import ProjectCard from "@/app/_components/ProjectCard/ProjectCard";
 import styles from "./page.module.css";
 import { projects } from "@/data/projects";
 

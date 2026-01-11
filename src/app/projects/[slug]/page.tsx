@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 import { SiGithub } from "react-icons/si";
 import { projects } from "@/data/projects";
 import type { ProjectContentBlock } from "@/data/projects";
-import ImageCarousel from "@/app/_components/ImageCarousel";
-import TechBadge from "@/app/_components/TechBadge";
-import LinkButton from "@/app/_components/LinkButton";
+import ImageCarousel from "@/app/_components/ImageCarousel/ImageCarousel";
+import TechBadge from "@/app/_components/TechBadge/TechBadge";
+import LinkButton from "@/app/_components/LinkButton/LinkButton";
 import styles from "./page.module.css";
-import Card from "@/app/_components/Card";
+import Card from "@/app/_components/Card/Card";
 
 interface PageProps {
   params: { slug: string };

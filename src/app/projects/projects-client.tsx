@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import ProjectCard from "@/app/_components/ProjectCard";
+import ProjectCard from "@/app/_components/ProjectCard/ProjectCard";
 import { projects } from "@/data/projects";
 import type { ProjectStatus } from "@/data/projects";
 import styles from "./page.module.css";
