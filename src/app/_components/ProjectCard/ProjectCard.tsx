@@ -12,35 +12,42 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
-  if (!project.media[0]) return null;
-
-  const image = project.media[0];
+  const hasDetailPage = project.content && project.content.length > 0;
+  const image = project.media?.[0];
  
   return (
-    <Card className={styles.projectCard}>
-      <div className={styles.imageWrapper}>
-        <Image
-          src={image.src}
-          alt={image.alt}
-          width={320}
-          height={280}
-          className={`${styles.image} ${image.className || ''}`}
-          style={image.style}
-          priority
-        />
-      </div>
+    <Card className={`${styles.projectCard} ${!image ? styles.noImage : ''}`}>
+      {image && (
+        <div className={styles.imageWrapper}>
+          <Image
+            src={image.src}
+            alt={image.alt}
+            width={320}
+            height={280}
+            className={`${styles.image} ${image.className || ''}`}
+            style={image.style}
+            priority
+          />
+        </div>
+      )}
       
       <div className={styles.content}>
         <div className={styles.topBar}>
           <div className={styles.header}>
-            <Link href={`/projects/${project.id}`} className={styles.titleLink}>
+            {hasDetailPage ? (
+              <Link href={`/projects/${project.id}`} className={styles.titleLink}>
+                <h3 className={styles.title}>{project.title}</h3>
+              </Link>
+            ) : (
               <h3 className={styles.title}>{project.title}</h3>
-            </Link>
-            <span className={styles.category}>({project.category})</span>
+            )}
+            <span className={styles.category}>({project.category} • {project.dateRange})</span>
           </div>
-          <Link href={`/projects/${project.id}`} className={styles.viewDetailsLink}>
-            View Details →
-          </Link>
+          {hasDetailPage && (
+            <Link href={`/projects/${project.id}`} className={styles.viewDetailsLink}>
+              View Details →
+            </Link>
+          )}
         </div>
         
         <p className={styles.subtitle}>{project.subtitle}</p>

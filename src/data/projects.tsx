@@ -1,4 +1,4 @@
-import { SiTypescript, SiRust, SiReact, SiNextdotjs, SiNestjs, SiPostgresql, SiDocker, SiGooglechrome, SiApple, SiRedis, SiSupabase, SiStripe, SiExpo } from "react-icons/si";
+import { SiTypescript, SiRust, SiReact, SiNextdotjs, SiNestjs, SiPostgresql, SiDocker, SiGooglechrome, SiApple, SiRedis, SiSupabase, SiStripe, SiExpo, SiExpress } from "react-icons/si";
 import { HiExternalLink } from "react-icons/hi";
 
 export type ProjectStatus = "completed" | "in-progress"
@@ -296,4 +296,18 @@ export const projects: Project[] = [
     ],
     dateRange: "2025",
   },
+  {
+    id: "LeagueAPIApp",
+    title: "League-API-App",
+    category: "Web App App",
+    subtitle: "A React Web app that provides real-time League of Legends stats, match history, and champion analytics using the Riot Games API.",
+    projectStatus: "in-progress",
+    media: [],
+    techStack: [
+      { icon: <SiReact />, label: "React", iconStyle: { color: "#61DAFB" } },
+      { icon: <SiExpress />, label: "Express", iconClassName: "nextjsIcon" },
+    ],
+    githubUrl: "https://github.com/AlexAxenti/League-API-App",
+    dateRange: "2022",
+  }
 ];
