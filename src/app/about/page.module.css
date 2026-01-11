@@ -1,0 +1,358 @@
+.page {
+  min-height: 100vh;
+  font-family: var(--font-geist-sans);
+  background-color: var(--background);
+  padding: 0 20px 40px;
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Hero Profile Section */
+.heroSection {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.heroCard {
+  width: 100%;
+  max-width: 600px;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.heroName {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 32px;
+  letter-spacing: -1px;
+}
+
+.heroImageWrapper {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 32px;
+  border: 4px solid var(--accent-color);
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.infoBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px;
+  background: var(--card-hover-background, rgba(128, 128, 128, 0.05));
+  border-radius: 12px;
+  transition: background 0.2s ease;
+}
+
+.infoLabel {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.infoValue {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.infoSubtext {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 20px;
+  margin-top: 8px;
+}
+
+.socialLinks a {
+  color: var(--text-secondary);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.socialLinks a:hover {
+  color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+/* Content Sections */
+.contentSection {
+  width: 100%;
+}
+
+.contentCard {
+  padding: 40px;
+}
+
+.cardHeading {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 20px 0;
+  letter-spacing: -0.5px;
+}
+
+.cardText {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0 0 16px 0;
+}
+
+.cardText:last-child {
+  margin-bottom: 0;
+}
+
+/* Tech Stack Section */
+.techSection {
+  width: 100%;
+}
+
+.techCard {
+  padding: 40px;
+}
+
+.techCategory {
+  margin-bottom: 12px;
+}
+
+.techCategory:last-child {
+  margin-bottom: 0;
+}
+
+.techCategoryHeading {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 16px 0;
+  letter-spacing: -0.3px;
+}
+
+.techGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Content Grid - Two Column Layout */
+.contentGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.contentGrid .contentCard {
+  padding: 32px;
+}
+
+.contentGrid .cardHeading {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+/* Books List */
+.bookList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bookList li {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  padding-left: 24px;
+  position: relative;
+}
+
+.bookList li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.bookList strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .infoBlock {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .infoBlock:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 800px) {
+  .heroSection {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .heroCard {
+    padding: 32px 24px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    padding-top: 24px;
+    gap: 24px;
+  }
+
+  .heroCard {
+    padding: 32px 24px;
+  }
+
+  .heroName {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+
+  .heroImageWrapper {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 24px;
+    border-width: 3px;
+  }
+
+  .heroInfo {
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .infoBlock {
+    padding: 12px;
+  }
+
+  .infoValue {
+    font-size: 18px;
+  }
+
+  .infoSubtext {
+    font-size: 14px;
+  }
+
+  .contentCard,
+  .techCard {
+    padding: 24px;
+  }
+
+  .contentGrid .contentCard {
+    padding: 24px;
+  }
+
+  .cardHeading {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .contentGrid .cardHeading {
+    font-size: 22px;
+  }
+
+  .cardText {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+
+  .techCategoryHeading {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .techGrid {
+    gap: 10px;
+  }
+
+  .bookList {
+    gap: 10px;
+  }
+
+  .bookList li {
+    font-size: 14px;
+    padding-left: 20px;
+  }
+
+  .socialLinks {
+    gap: 16px;
+  }
+
+  .socialLinks svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 400px) {
+  .heroName {
+    font-size: 28px;
+  }
+
+  .heroImageWrapper {
+    width: 160px;
+    height: 160px;
+  }
+
+  .cardHeading {
+    font-size: 22px;
+  }
+
+  .contentGrid .cardHeading {
+    font-size: 20px;
+  }
+}
