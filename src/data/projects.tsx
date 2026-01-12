@@ -101,10 +101,10 @@ export const projects: Project[] = [
             type: "bullets", 
             items: [
               "Contacts with tags, notes, and follow-up reminders.",
-              "Chrome extension to capture and save people while you’re browsing anywhere on the web.",
-              "AI chat that uses your stored context to suggest conversation starters and next steps",
+              "Works in Web + Chrome extension to capture and save people while you’re browsing anywhere on the web.",
+              "AI chat that uses your stored context to suggest conversation starters, advice on next steps, and create message templates",
               "Stripe subscriptions for paid features + usage limits",
-              "Web + extension stay in sync so you can log things wherever you are",
+              "Template systems for saving common notes and messages",
             ]
           }
         ]
@@ -115,11 +115,8 @@ export const projects: Project[] = [
         blocks: [
           { 
             type: "paragraph", 
-            content: "The application architecture leverages NestJS on the backend for scalable API development, with PostgreSQL handling persistent data storage and Supabase providing authentication and real-time capabilities. The frontend applications are both built using React" 
-          },
-          { 
-            type: "paragraph", 
-            content: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula." }
+            content: "The tech stack consists of a React front-end for both the web app and chrome extension, paired with a NestJS backend API. Supabase is used for its authentication and PostgreSQL database. Docker was used for local backend and database development." 
+          }
         ]
       }
     ],
@@ -154,8 +151,7 @@ export const projects: Project[] = [
         type: "section",
         title: "Project Motivation",
         blocks: [
-          { type: "paragraph", content: "Posture Check was developed to address the growing issue of poor posture caused by prolonged device usage. The app provides gentle, customizable reminders to help users develop healthier habits throughout their day." },
-          { type: "paragraph", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Curabitur blandit tempus porttitor." }
+          { type: "paragraph", content: "Posture Check was developed to address the growing issue of poor posture caused by prolonged device and desk usage. The app provides gentle reminders to help users develop healthier habits throughout their day, while tracking statistics for habit formation." },
         ]
       },
       {
@@ -176,10 +172,9 @@ export const projects: Project[] = [
       },
       {
         type: "section",
-        title: "Development Approach",
+        title: "Technical Highlights",
         blocks: [
-          { type: "paragraph", content: "Built with React Native and Expo, the app prioritizes simplicity and user experience. The notification system uses native APIs to ensure reliable reminders without draining battery life. TypeScript provides type safety throughout the codebase." },
-          { type: "paragraph", content: "Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor." }
+          { type: "paragraph", content: "Built with React Native and Expo, the app prioritizes simplicity and user experience. The notification system uses native APIs to ensure reliable reminders without draining battery life or adding complexity." },
         ]
       }
     ],
@@ -209,8 +204,8 @@ export const projects: Project[] = [
         type: "section",
         title: "About the Project",
         blocks: [
-          { type: "paragraph", content: "ShellStash is a command-line tool designed for developers who frequently reuse complex shell commands. Instead of searching through bash history or maintaining text files, ShellStash provides a clean interface for storing, tagging, and retrieving commands." },
-          { type: "paragraph", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui." }
+          { type: "paragraph", content: "ShellStash is a command-line tool designed for developers who frequently reuse complex shell commands. Instead of searching through bash history or maintaining text files, ShellStash provides a clean interface for storing and retrieving commands." },
+          { type: "paragraph", content: "I made this as my first real project using Rust. It targeted a pain point I face myself at work, and with the goal to help others and streamline distribution, I set up GitHub actions to automate builds and releases." }
         ]
       },
       {
@@ -220,23 +215,13 @@ export const projects: Project[] = [
           {
             type: "bullets",
             items: [
-              "Save frequently-used commands with descriptions and tags",
+              "Save frequently-used commands",
               "Cross-platform compatibility (Linux, macOS, Windows)",
-              "Fast search and filtering capabilities",
               "JSON-based storage for easy backup and version control",
-              "Zero dependencies at runtime"
             ]
           }
         ]
       },
-      {
-        type: "section",
-        title: "Why Rust?",
-        blocks: [
-          { type: "paragraph", content: "Rust was chosen for its performance, memory safety, and excellent tooling for CLI applications. The resulting binary is fast, lightweight, and has no runtime dependencies, making it easy to distribute and use across different environments." },
-          { type: "paragraph", content: "Sed posuere consectetur est at lobortis. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus." }
-        ]
-      }
     ],
     dateRange: "2025",
     displayHomepage: true,
@@ -270,7 +255,6 @@ export const projects: Project[] = [
         title: "Project Goals",
         blocks: [
           { type: "paragraph", content: "MiniCRM was created as a learning platform to explore microservices architecture, caching strategies, and scalable system design. The project implements common CRM features while emphasizing clean architecture and service separation." },
-          { type: "paragraph", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum. Cras mattis consectetur purus sit amet fermentum." }
         ]
       },
       {
@@ -280,9 +264,9 @@ export const projects: Project[] = [
           {
             type: "bullets",
             items: [
-              "Microservices architecture with separate contact, task, and analytics services",
+              "Microservices architecture with separate contact and events services",
               "Redis caching layer for frequently accessed data",
-              "PostgreSQL for reliable data persistence",
+              "Rate limiting and authentication via API Gateway",
               "Event-driven communication between services",
               "Docker containerization for consistent deployment"
             ]
@@ -294,7 +278,6 @@ export const projects: Project[] = [
         title: "Learning Outcomes",
         blocks: [
           { type: "paragraph", content: "This project provided hands-on experience with distributed systems, API design, database optimization, and deployment orchestration. The modular architecture allows for easy experimentation with different scaling strategies and design patterns." },
-          { type: "paragraph", content: "Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum." }
         ]
       }
     ],
