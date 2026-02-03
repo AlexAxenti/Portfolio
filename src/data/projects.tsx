@@ -1,4 +1,4 @@
-import { SiTypescript, SiRust, SiReact, SiNextdotjs, SiNestjs, SiPostgresql, SiDocker, SiGooglechrome, SiApple, SiRedis, SiSupabase, SiStripe, SiExpo, SiExpress } from "react-icons/si";
+import { SiTypescript, SiRust, SiReact, SiNextdotjs, SiNestjs, SiPostgresql, SiDocker, SiGooglechrome, SiApple, SiRedis, SiSupabase, SiStripe, SiExpo, SiExpress, SiSqlite } from "react-icons/si";
 import { HiExternalLink } from "react-icons/hi";
 
 export type ProjectStatus = "completed" | "in-progress"
@@ -287,7 +287,7 @@ export const projects: Project[] = [
   {
     id: "LeagueAPIApp",
     title: "League-API-App",
-    category: "Web App App",
+    category: "Web App",
     subtitle: "A React Web app that provides real-time League of Legends stats, match history, and champion analytics using the Riot Games API.",
     projectStatus: "in-progress",
     media: [],
@@ -297,6 +297,22 @@ export const projects: Project[] = [
     ],
     githubUrl: "https://github.com/AlexAxenti/League-API-App",
     dateRange: "2022",
+    displayHomepage: false,
+  },
+  {
+    id: "ScreenTimeTracker",
+    title: "Screen Time Tracker",
+    category: "Windows App",
+    subtitle: "A windows app and background agent that tracks screen time and application usage and provides detailed statistics.",
+    projectStatus: "in-progress",
+    media: [],
+    techStack: [
+      { icon: <SiRust />, label: "Rust", iconStyle: { color: "#CE422B" } },
+      { icon: <SiReact />, label: "React", iconStyle: { color: "#61DAFB" } },
+      { icon: <SiSqlite />, label: "SQLite", iconStyle: { color: "#003B57" } },
+    ],
+    githubUrl: "https://github.com/AlexAxenti/screen_time",
+    dateRange: "2026",
     displayHomepage: false,
   }
 ];
