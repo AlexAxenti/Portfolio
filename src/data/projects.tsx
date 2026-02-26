@@ -1,7 +1,12 @@
-import { SiTypescript, SiRust, SiReact, SiNextdotjs, SiNestjs, SiPostgresql, SiDocker, SiGooglechrome, SiApple, SiRedis, SiSupabase, SiStripe, SiExpo, SiExpress, SiSqlite } from "react-icons/si";
+import { SiTypescript, SiRust, SiReact, SiNextdotjs, SiNestjs, SiPostgresql, SiDocker, SiGooglechrome, SiApple, SiRedis, SiSupabase, SiStripe, SiExpo, SiExpress, SiSqlite, SiGithub } from "react-icons/si";
 import { HiExternalLink } from "react-icons/hi";
 
-export type ProjectStatus = "completed" | "in-progress"
+// export type ProjectStatus = "completed" | "in-progress"
+
+export enum ProjectStatus {
+  Completed,
+  InProgress
+}
 
 export interface Project {
   id: string;
@@ -50,7 +55,7 @@ export const projects: Project[] = [
     title: "TouchBase",
     category: "Web and Chrome Extension SaaS",
     subtitle: "A lightweight, AI-powered networking CRM to organize contacts, track follow-ups, and stay intentional with professional relationships.",
-    projectStatus: "completed",
+    projectStatus: ProjectStatus.Completed,
     media: [
       {
         type: "image",
@@ -123,12 +128,107 @@ export const projects: Project[] = [
     dateRange: "2025 - 2026",
     displayHomepage: true,
   },
+    {
+    id: "ScreenTimeTracker",
+    title: "Screen Time Tracker",
+    category: "Windows App",
+    subtitle: "A windows app and background agent that tracks screen time and application usage and provides detailed statistics.",
+    projectStatus: ProjectStatus.Completed,
+    media: [
+      {
+        type: "image",
+        src: "/ScreenTime1.png",
+        alt: "Screen Time Dashboard Screenshot",
+        caption: "Screen Time Dashboard",
+      },
+      {
+        type: "image",
+        src: "/ScreenTime2.png",
+        alt: "Screen Time Applications list Screenshot",
+        caption: "Screen Time Applications List",
+      },
+      {
+        type: "image",
+        src: "/ScreenTime3.png",
+        alt: "Screen Time App Usage Stats Screenshot",
+        caption: "Screen Time App Usage Stats",
+      },
+      {
+        type: "image",
+        src: "/ScreenTime4.png",
+        alt: "Screen Time Task Bar Agent Screenshot",
+        caption: "Screen Time Task Bar Agent",
+      }
+    ],
+    content: [
+    { 
+      type: "section", 
+      title: "Overview", 
+      blocks: [
+        { 
+          type: "paragraph", 
+          content: "This is a Windows-only screen time + usage analytics app inspired by the iOS screen usage app. I built it mainly as a learning project to get stronger at systems-level Rust (background agents, OS APIs, concurrency, data modeling), but also with a strong focus on clean architecture, clear module boundaries, and keeping the codebase organized as it grows. My intent is to publish this for free."
+        }, 
+        { 
+          type: "paragraph", 
+          content: "Everything is local-only: no accounts, and nothing saved on the cloud. The app runs as a long-running background agent and stores data in a local SQLite database, and the desktop dashboard communicates with the Rust backend through explicit Tauri commands and DTOs rather than accessing the database directly." 
+        }
+      ]
+    },
+    {
+      type: "section",
+      title: "Key Features",
+      blocks: [
+        { 
+          type: "bullets", 
+          items: [
+            "Tracks active foreground applications.",
+            "Detects idle/AFK time so usage doesn’t keep counting when you’re away.",
+            "Aggregates raw samples into time segments for cleaner analytics and better DB performance.",
+            "Dashboard views for Daily / Weekly summaries, top apps, timelines and other interesting statistics.",
+            "Settings to tailor performance + privacy (hide vs destroy on close, start on windows start up, disable tracking specific apps, pause / resume tracking).",
+            "Local-first by design: all data stays on-device in SQLite."
+          ]
+        }
+      ]
+    },
+    {
+      type: "section",
+      title: "Technical Highlights",
+      blocks: [
+        { 
+          type: "paragraph", 
+          content: "The app is built as a Rust background agent + a desktop UI (Tauri + React/TypeScript) that reads analytics from a shared SQLite database. I tried to keep the codebase organized with clear module boundaries (sampler collector and platform/Win32 layer, database layer, Tauri layer, UI bridge over IPC) with an emphasis on clean seperation of concerns and clear communication patterns between components." 
+        },
+        { 
+          type: "paragraph", 
+          content: "For performance and communication, the collector uses multiple threads (sampling vs writing) with channel-based communication, and the data is stored as merged “segments” to reduce database writes until focus changes. The UI talks to Rust through clear DTOs/commands over IPC (instead of sharing internals directly)" 
+        },
+        { 
+          type: "paragraph", 
+          content: "On the Windows side, it uses Win32 APIs to detect the active foreground window, handle idle detection, gather metadata like titles and icons, etc. I also added schema migrations early so updates don’t rely on manual DB changes once it’s installed on someone else’s machine." 
+        }
+      ]
+    }
+  ],
+    techStack: [
+      { icon: <SiRust />, label: "Rust", iconStyle: { color: "#CE422B" } },
+      { icon: <SiReact />, label: "React", iconStyle: { color: "#61DAFB" } },
+      { icon: <SiSqlite />, label: "SQLite", iconStyle: { color: "#003B57" } },
+    ],
+    externalLinks: [
+      { url: "https://github.com/AlexAxenti/screen_time/releases", label: "Releases Installation", icon: <SiGithub /> },
+    ],
+    githubUrl: "https://github.com/AlexAxenti/screen_time",
+    dateRange: "2026",
+    displayHomepage: true,
+  },
   {
     id: "PostureCheck",
     title: "Posture Check",
     category: "Mobile App",
     subtitle: "A cross-platform mobile app that helps users improve posture through gentle reminders and habit tracking.",
-    projectStatus: "completed",
+    projectStatus: ProjectStatus.Completed,
     media: [
       {
         type: "image",
@@ -186,7 +286,7 @@ export const projects: Project[] = [
     title: "ShellStash",
     category: "CLI Tool",
     subtitle: "A cross-platform Rust CLI for saving, organizing, and reusing shell commands.",
-    projectStatus: "completed",
+    projectStatus: ProjectStatus.Completed,
     media: [
       {
         type: "image",
@@ -230,7 +330,7 @@ export const projects: Project[] = [
     title: "MiniCRM",
     category: "Systems Design Practice",
     subtitle: "A modular CRM built to explore and practice system design patterns, service boundaries, and scalability trade-offs.",
-    projectStatus: "completed",
+    projectStatus: ProjectStatus.Completed,
     media: [
       {
         type: "image",
@@ -289,7 +389,7 @@ export const projects: Project[] = [
     title: "League-API-App",
     category: "Web App",
     subtitle: "A React Web app that provides real-time League of Legends stats, match history, and champion analytics using the Riot Games API.",
-    projectStatus: "in-progress",
+    projectStatus: ProjectStatus.InProgress,
     media: [],
     techStack: [
       { icon: <SiReact />, label: "React", iconStyle: { color: "#61DAFB" } },
@@ -299,20 +399,4 @@ export const projects: Project[] = [
     dateRange: "2022",
     displayHomepage: false,
   },
-  {
-    id: "ScreenTimeTracker",
-    title: "Screen Time Tracker",
-    category: "Windows App",
-    subtitle: "A windows app and background agent that tracks screen time and application usage and provides detailed statistics.",
-    projectStatus: "in-progress",
-    media: [],
-    techStack: [
-      { icon: <SiRust />, label: "Rust", iconStyle: { color: "#CE422B" } },
-      { icon: <SiReact />, label: "React", iconStyle: { color: "#61DAFB" } },
-      { icon: <SiSqlite />, label: "SQLite", iconStyle: { color: "#003B57" } },
-    ],
-    githubUrl: "https://github.com/AlexAxenti/screen_time",
-    dateRange: "2026",
-    displayHomepage: false,
-  }
 ];

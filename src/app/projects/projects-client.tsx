@@ -3,11 +3,11 @@
 import { useState } from "react";
 import ProjectCard from "@/app/_components/ProjectCard/ProjectCard";
 import { projects } from "@/data/projects";
-import type { ProjectStatus } from "@/data/projects";
+import { ProjectStatus } from "@/data/projects";
 import styles from "./page.module.css";
 
 export default function ProjectsClient() {
-  const [activeTab, setActiveTab] = useState<ProjectStatus>("completed");
+  const [activeTab, setActiveTab] = useState<ProjectStatus>(ProjectStatus.Completed);
 
   const filteredProjects = projects.filter(
     (project) => project.projectStatus === activeTab
@@ -22,14 +22,14 @@ export default function ProjectsClient() {
         {/* Tab Selector */}
           <div className={styles.tabContainer}>
             <button
-              className={`${styles.tab} ${activeTab === "completed" ? styles.activeTab : ""}`}
-              onClick={() => setActiveTab("completed")}
+              className={`${styles.tab} ${activeTab === ProjectStatus.Completed ? styles.activeTab : ""}`}
+              onClick={() => setActiveTab(ProjectStatus.Completed)}
             >
               Completed
             </button>
             <button
-              className={`${styles.tab} ${activeTab === "in-progress" ? styles.activeTab : ""}`}
-              onClick={() => setActiveTab("in-progress")}
+              className={`${styles.tab} ${activeTab === ProjectStatus.InProgress ? styles.activeTab : ""}`}
+              onClick={() => setActiveTab(ProjectStatus.InProgress)}
             >
               In Progress / Old
             </button>

@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import Link from "next/link";
 import { SiGithub } from "react-icons/si";
 import { projects } from "@/data/projects";
 import type { ProjectContentBlock } from "@/data/projects";
@@ -87,6 +88,12 @@ export default async function ProjectPage({ params }: PageProps) {
         <article className={styles.article}>
           {/* Header Section */}
           <header className={styles.header}>
+            <Link href="/projects" className={styles.backButton}>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              Projects
+            </Link>
             <h1 className={styles.title}>{project.title}</h1>
             <p className={styles.subtitle}>{project.subtitle}</p>
             {project.dateRange && (
