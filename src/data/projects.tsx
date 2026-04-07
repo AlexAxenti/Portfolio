@@ -1,5 +1,25 @@
-import { SiTypescript, SiRust, SiReact, SiNextdotjs, SiNestjs, SiPostgresql, SiDocker, SiGooglechrome, SiApple, SiRedis, SiSupabase, SiStripe, SiExpo, SiExpress, SiSqlite, SiGithub } from "react-icons/si";
+import { 
+  SiTypescript, 
+  SiRust, 
+  SiReact, 
+  SiNextdotjs, 
+  SiNestjs, 
+  SiPostgresql, 
+  SiDocker, 
+  SiGooglechrome, 
+  SiApple, 
+  SiRedis, 
+  SiSupabase, 
+  SiStripe, 
+  SiExpo, 
+  SiExpress, 
+  SiSqlite, 
+  SiGithub, 
+  SiDotnet, 
+  SiGooglecloud, 
+  SiSharp } from "react-icons/si";
 import { HiExternalLink } from "react-icons/hi";
+import { FaMicrosoft, FaDatabase } from "react-icons/fa";
 
 // export type ProjectStatus = "completed" | "in-progress"
 
@@ -128,7 +148,7 @@ export const projects: Project[] = [
     dateRange: "2025 - 2026",
     displayHomepage: true,
   },
-    {
+  {
     id: "ScreenTimeTracker",
     title: "Screen Time Tracker",
     category: "Windows App",
@@ -184,10 +204,10 @@ export const projects: Project[] = [
           items: [
             "Tracks active foreground applications.",
             "Detects idle/AFK time so usage doesn’t keep counting when you’re away.",
-            "Aggregates raw samples into time segments for cleaner analytics and better DB performance.",
             "Dashboard views for Daily / Weekly summaries, top apps, timelines and other interesting statistics.",
             "Settings to tailor performance + privacy (hide vs destroy on close, start on windows start up, disable tracking specific apps, pause / resume tracking).",
-            "Local-first by design: all data stays on-device in SQLite."
+            "Local-first by design: all data stays on-device in SQLite.",
+            "Aggregates raw samples into time segments for cleaner analytics and better DB performance.",
           ]
         }
       ]
@@ -220,6 +240,117 @@ export const projects: Project[] = [
       { url: "https://github.com/AlexAxenti/screen_time/releases", label: "Releases Installation", icon: <SiGithub /> },
     ],
     githubUrl: "https://github.com/AlexAxenti/screen_time",
+    dateRange: "2026",
+    displayHomepage: true,
+  },
+  {
+    id: "BiteStash",
+    title: "BiteStash",
+    category: "Mobile App and ASP.NET Core API",
+    subtitle: "A mobile app that helps you remember your favourite restaurants.",
+    projectStatus: ProjectStatus.Completed,
+    media: [
+      {
+        type: "image",
+        src: "/bite_stash_icon.png",
+        alt: "BiteStash Icon Screenshot",
+        caption: "BiteStash Icon",
+      }
+    ],
+    content: [
+    { 
+      type: "section", 
+      title: "Overview", 
+      blocks: [
+        { 
+          type: "paragraph", 
+          content: "BiteStash is a full-stack mobile application built as a learning-focused project to deepen my understanding of modern backend development with ASP.NET Core. The app allows users to save and track restaurants they’ve visited or want to try, along with personal notes, ratings, and visit history."
+        }, 
+        { 
+          type: "paragraph", 
+          content: "While the core functionality is intentionally simple, the focus of the project was on building a production-style backend with proper architecture, external API integration, and cloud deployment." 
+        }
+      ]
+    },
+    {
+      type: "section",
+      title: "Key Features",
+      blocks: [
+        { 
+          type: "bullets", 
+          items: [
+            "Search and select real-world restaurants using the Google Places Api.",
+            "Save restaurants as 'Visited' or 'Want to Try'",
+            "Add personal notes, ratings, and optional visit dates",
+            "Open restaurants directly in Google Maps for full details",
+            "Secure authentication with persistent login sessions",
+          ]
+        }
+      ]
+    },
+    {
+      type: "section",
+      title: "API Key Features",
+      blocks: [
+        { 
+          type: "bullets", 
+          items: [
+            "ASP.NET Core Web API with clean layered architecture (Controllers → Services → Data)",
+            "JWT Authentication + Refresh Tokens using ASP.NET Identity for secure, persistent mobile sessions",
+            "Hashed refresh token storage with support for multiple concurrent device sessions",
+            "Cloud deployment on Azure Container Apps from container images published to GitHub Container Registry",
+            "Azure SQL Database + Entity Framework Core for relational data access and migrations",
+            "Secure secret management with Azure Key Vault",
+            "Dockerized backend for consistent builds and deployment portability",
+            "Google Places API Integration for accurate restaurant search and selection (place ID-based)",
+            "Backend-only external API calls to protect API keys and centralize integrations",
+            "DTO-based API design to enforce clear contracts between frontend and backen"
+          ] 
+        }
+      ]
+    },
+    {
+      type: "section",
+      title: "Technical Highlights",
+      blocks: [
+        { 
+          type: "paragraph", 
+          content: "The backend is built with ASP.NET Core Web API using a clean layered architecture that separates controllers, business logic, and data access. Entity Framework Core is used for database interactions with Azure SQL, including migrations and schema management. The API uses DTOs for all request and response models to maintain clear boundaries between layers and avoid exposing internal database structures."
+        },
+        { 
+          type: "paragraph", 
+          content: "Authentication is implemented using ASP.NET Identity with JWT access tokens and refresh tokens to support persistent mobile sessions. Refresh tokens are securely stored in hashed form and allow multiple concurrent sessions across devices."
+        }
+      ]
+    },
+    {
+      type: "section",
+      title: "Cloud and Deployment",
+      blocks: [
+        { 
+          type: "paragraph", 
+          content: "One of the primary goals of this project was to gain hands-on experience with the Azure ecosystem and understand how backend applications are deployed in a more enterprise-oriented cloud environment."
+        },
+        { 
+          type: "paragraph", 
+          content: "This led to a deployment pipeline where the backend is containerized using Docker, published as an image to GitHub Container Registry (GHCR), and deployed to Azure Container Apps. The application uses Azure SQL Database for persistent storage, while Azure Key Vault is used to securely manage sensitive configuration such as connection strings and API keys, ensuring a clear separation between code and infrastructure."
+        }
+      ]
+    }
+  ],
+    techStack: [
+      { icon: <SiDotnet />, label: "ASP.NET", iconStyle: { color: "#512BD4" } },
+      { icon: <FaMicrosoft />, label: "Azure", iconStyle: { color: "#0078D4" } },
+      { icon: <SiGooglecloud />, label: "GCP Apis", iconStyle: { color: "#4285F4" } },
+      { icon: <SiReact />, label: "React Native", iconStyle: { color: "#61DAFB" } },
+      { icon: <SiSharp />, label: "C#", iconStyle: { color: "#68217A" } },
+      { icon: <FaDatabase />, label: "Azure SQL", iconStyle: { color: "#0078D4" } },
+    ],
+    externalLinks: [
+      { url: "https://github.com/AlexAxenti/BiteStashApi", label: "API Repo", icon: <SiGithub /> },
+      { url: "https://github.com/AlexAxenti/BiteStashMobile", label: "Mobile Repo", icon: <SiGithub /> },
+      { url: "https://apps.apple.com/us/app/bitestash/id6761634953", label: "App Store", icon: <SiApple /> },
+    ],
     dateRange: "2026",
     displayHomepage: true,
   },
