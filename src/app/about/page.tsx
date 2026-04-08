@@ -2,7 +2,6 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { 
   SiTypescript, 
-  SiJavascript, 
   SiReact, 
   SiNextdotjs, 
   SiNestjs,
@@ -10,18 +9,8 @@ import {
   SiDotnet,
   SiRust,
   SiPostgresql,
-  SiRedis,
-  SiMongodb,
   SiDocker,
-  SiGit,
-  SiGithubactions,
-  SiAmazon,
-  SiTauri,
-  SiAngular,
   SiNodedotjs,
-  SiJenkins,
-  SiKubernetes,
-  SiGoogle,
   SiPython
 } from "react-icons/si";
 import Card from "@/app/_components/Card/Card";
