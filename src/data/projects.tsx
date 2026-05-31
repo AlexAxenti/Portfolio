@@ -100,9 +100,10 @@ export const projects: Project[] = [
       { icon: <SiStripe />, label: "Stripe", iconStyle: { color: "#635BFF" } },
     ],
     externalLinks: [
-      { url: "https://touch-base.ca/", label: "Web App", icon: <HiExternalLink /> },
+      { url: "https://touch-base.ca/", label: "Web App (Inactive)", icon: <HiExternalLink /> },
       { url: "https://chromewebstore.google.com/detail/touchbase/dgmjggdiacoemgnjjlkijjcmdljnmhok", label: "Chrome Store", icon: <SiGooglechrome /> },
     ],
+    githubUrl: "https://github.com/orgs/theefellowship/repositories",
     content: [
       { 
         type: "section", 
@@ -127,8 +128,10 @@ export const projects: Project[] = [
             items: [
               "Contacts with tags, notes, and follow-up reminders.",
               "Works in Web + Chrome extension to capture and save people while you’re browsing anywhere on the web.",
-              "AI chat that uses your stored context to suggest conversation starters, advice on next steps, and create message templates",
+              "AI chat that uses your stored context to suggest conversation starters, advice on next steps, and generate structured message templates.",
+              "AI output parsing system that surfaces generated templates as quick-save actions for faster workflows.",
               "Stripe subscriptions for paid features + usage limits",
+              "Automated reminder scheduling via cron jobs to improve reliability and reduce redundant email platform calls.",
               "Template systems for saving common notes and messages",
             ]
           }
