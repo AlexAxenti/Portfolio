@@ -17,7 +17,9 @@ import {
   SiGithub, 
   SiDotnet, 
   SiGooglecloud, 
-  SiSharp } from "react-icons/si";
+  SiSharp, 
+  SiAngular,
+  SiRabbitmq} from "react-icons/si";
 import { HiExternalLink } from "react-icons/hi";
 import { FaMicrosoft, FaDatabase } from "react-icons/fa";
 
@@ -149,6 +151,98 @@ export const projects: Project[] = [
       }
     ],
     dateRange: "2025 - 2026",
+    displayHomepage: true,
+  },
+  {
+    id: "PortfolioTracker",
+    title: "Portfolio Tracker",
+    category: "Full Stack Web App",
+    subtitle: "A portfolio management application for tracking trades, holdings, and investment performance.",
+    projectStatus: ProjectStatus.Completed,
+    media: [
+      {
+        type: "image",
+        src: "/PortfolioTracker1.png",
+        alt: "Portfolio Tracker Holdings View",
+        caption: "Portfolio Holdings Dashboard",
+      }
+    ],
+    content: [
+      {
+        type: "section",
+        title: "Overview",
+        blocks: [
+          {
+            type: "paragraph",
+            content: "Portfolio Tracker is a personal project built primarily for learning modern Angular and ASP.NET Core development. The application allows users to track trades, manage holdings, and monitor portfolio performance while exploring common backend architecture patterns used in production systems."
+          },
+          {
+            type: "paragraph",
+            content: "The goal was to gain hands-on experience with Angular, Entity Framework Core, PostgreSQL, API design, deployment, and event-driven processing."
+          }
+        ]
+      },
+      {
+        type: "section",
+        title: "Key Features",
+        blocks: [
+          {
+            type: "bullets",
+            items: [
+              "Create, edit, and delete stock trades.",
+              "Automatically maintain portfolio holdings based on trade activity.",
+              "Portfolio dashboard showing allocations, market value, and unrealized profit/loss.",
+              "Historical trade and position tracking by ticker.",
+              "Live market price refreshes using the Finnhub API.",
+              "User authentication and secure portfolio isolation."
+            ]
+          }
+        ]
+      },
+      {
+        type: "section",
+        title: "Technical Highlights",
+        blocks: [
+          {
+            type: "paragraph",
+            content: "The backend follows a layered architecture using Controllers, Services, Repositories, DTOs, and Entity Framework Core. Business logic such as portfolio calculations and holdings management is isolated within the service layer while repositories handle database access."
+          },
+          {
+            type: "paragraph",
+            content: "To improve resilience around external API limits, price refresh requests are routed through a RabbitMQ queue and processed asynchronously by background consumers. Combined with caching and rate limiting, this allows refresh requests to be handled safely and without excess request dropping while still avoiding overwhelming third-party providers."
+          },
+          {
+            type: "paragraph",
+            content: "The frontend is built with Angular using standalone components, reactive forms, Angular Material, and RxJS. The project also includes Docker-based deployment, automated CI/CD pipelines, PostgreSQL hosting through Supabase, and VPS deployment for the API."
+          }
+        ]
+      }
+    ],
+    techStack: [
+      { icon: <SiAngular />, label: "Angular", iconStyle: { color: "#DD0031" } },
+      { icon: <SiDotnet />, label: ".NET", iconStyle: { color: "#512BD4" } },
+      { icon: <SiPostgresql />, label: "PostgreSQL", iconStyle: { color: "#336791" } },
+      { icon: <SiRabbitmq />, label: "RabbitMQ", iconStyle: { color: "#FF6600" } },
+      { icon: <SiDocker />, label: "Docker", iconStyle: { color: "#2496ED" } },
+    ],
+    externalLinks: [
+      {
+        url: "https://portfolio-tracker-ui-k3rz.onrender.com/",
+        label: "Live Demo",
+        icon: <HiExternalLink />
+      },
+      {
+        url: "https://github.com/AlexAxenti/Portfolio-Tracker-API",
+        label: "API Repository",
+        icon: <SiGithub />
+      },
+      {
+        url: "https://github.com/AlexAxenti/Portfolio-Tracker-UI",
+        label: "UI Repository",
+        icon: <SiGithub />
+      }
+    ],
+    dateRange: "2026",
     displayHomepage: true,
   },
   {
