@@ -19,9 +19,11 @@ import {
   SiGooglecloud, 
   SiSharp, 
   SiAngular,
-  SiRabbitmq} from "react-icons/si";
+  SiRabbitmq,
+  SiSpring,
+  SiApachekafka} from "react-icons/si";
 import { HiExternalLink } from "react-icons/hi";
-import { FaMicrosoft, FaDatabase } from "react-icons/fa";
+import { FaMicrosoft, FaDatabase, FaJava } from "react-icons/fa";
 
 // export type ProjectStatus = "completed" | "in-progress"
 
@@ -571,6 +573,9 @@ export const projects: Project[] = [
       { icon: <SiReact />, label: "React", iconStyle: { color: "#61DAFB" } },
       { icon: <SiNestjs />, label: "NestJS", iconStyle: { color: "#E0234E" } },
       { icon: <SiNextdotjs />, label: "Next.js", iconClassName: "nextjsIcon" },
+      { icon: <FaJava />, label: "Java", iconStyle: { color: "#ED8B00" } },
+      { icon: <SiSpring />, label: "Spring Boot", iconStyle: { color: "#6DB33F" } },
+      { icon: <SiApachekafka />, label: "Kafka", iconClassName: "nextjsIcon" },
       { icon: <SiRedis />, label: "Redis", iconStyle: { color: "#DC382D" } },
       { icon: <SiPostgresql />, label: "PostgreSQL", iconStyle: { color: "#4169E1" } },
       { icon: <SiDocker />, label: "Docker", iconStyle: { color: "#2496ED" } },
